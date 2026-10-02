@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Aniversario 💜 2 Años y 8 Meses Juntos</title>
+    <meta name="description" content="Una carta digital y sorpresa de aniversario celebrando 2 años y 8 meses juntos.">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Audio Element for background music -->
+    <audio id="bg-audio" loop preload="auto">
+        <source src="musica/Cumbiana(MP3_160K).mp3" type="audio/mpeg">
+        <source src="musica.mp3" type="audio/mpeg">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Background Elements -->
+    <div class="bg-gradient-overlay"></div>
+    <canvas id="stars-canvas"></canvas>
+    <div id="particles-container"></div>
+
+    <!-- ==========================================
+         MAIN LANDING SECTION (BLOOMING FLOWER)
+         ========================================== -->
+    <section id="landing-page" class="page-section">
+        <div class="landing-container">
+            
+            <div class="badge-anniversary">
+                <i class="fas fa-sparkles"></i> Celebrando Nuestro Amor <span>💜</span>
+            </div>
+
+            <h1 class="main-title">¡Feliz Aniversario, Mi Amor!</h1>
+            <p class="subtitle">2 Años y 8 Meses Juntos</p>
+
+            <!-- CSS BLOOMING PURPLE FLOWER -->
+            <div class="flower-wrapper">
+                <div class="flower-aura"></div>
+                <div class="flower">
+                    <!-- Stem & Leaves -->
+                    <div class="flower__stem">
+                        <div class="flower__leaf flower__leaf--left"></div>
+                        <div class="flower__leaf flower__leaf--right"></div>
+                    </div>
+
+                    <!-- Flower Head & Petals -->
+                    <div class="flower__head">
+                        <div class="flower__center"></div>
+                        
+                        <!-- Outer Layer Petals -->
+                        <div class="flower__petal p1"></div>
+                        <div class="flower__petal p2"></div>
+                        <div class="flower__petal p3"></div>
+                        <div class="flower__petal p4"></div>
+                        <div class="flower__petal p5"></div>
+                        <div class="flower__petal p6"></div>
+                        <div class="flower__petal p7"></div>
+                        <div class="flower__petal p8"></div>
+                        <div class="flower__petal p9"></div>
+                        <div class="flower__petal p10"></div>
+                        <div class="flower__petal p11"></div>
+                        <div class="flower__petal p12"></div>
+
+                        <!-- Inner Layer Petals -->
+                        <div class="flower__petal inner ip1"></div>
+                        <div class="flower__petal inner ip2"></div>
+                        <div class="flower__petal inner ip3"></div>
+                        <div class="flower__petal inner ip4"></div>
+                        <div class="flower__petal inner ip5"></div>
+                        <div class="flower__petal inner ip6"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIVE TIMER -->
+            <div class="timer-container">
+                <div class="time-box">
+                    <span id="count-years" class="number">2</span>
+                    <span class="label">Años</span>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-box">
+                    <span id="count-months" class="number">8</span>
+                    <span class="label">Meses</span>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-box">
+                    <span id="count-days" class="number">00</span>
+                    <span class="label">Días</span>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-box">
+                    <span id="count-hours" class="number">00</span>
+                    <span class="label">Horas</span>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-box">
+                    <span id="count-minutes" class="number">00</span>
+                    <span class="label">Min</span>
+                </div>
+                <div class="time-divider">:</div>
+                <div class="time-box">
+                    <span id="count-seconds" class="number">00</span>
+                    <span class="label">Seg</span>
+                </div>
+            </div>
+
+            <!-- ACTION BUTTON TO GO TO NEXT PAGE -->
+            <button id="start-journey-btn" class="btn-primary">
+                <i class="fas fa-heart"></i> Abrir Mi Carta Para Ti 💌
+            </button>
+
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECOND PAGE / LOVE HUB (CARTA, FOTOS, VIDEOS)
+         ========================================== -->
+    <section id="hub-page" class="page-section hidden">
+        
+        <!-- HUB HEADER & NAVIGATION -->
+        <header class="hub-header">
+            <div class="hub-brand">
+                <i class="fas fa-infinity" style="color: var(--pink-accent);"></i> 2 Años y 8 Meses
+            </div>
+            
+            <nav class="nav-tabs">
+                <button class="tab-btn active" data-tab="pane-letter">
+                    <i class="fas fa-envelope"></i> Carta de Amor
+                </button>
+                <button class="tab-btn" data-tab="pane-photos">
+                    <i class="fas fa-images"></i> Fotos
+                </button>
+                <button class="tab-btn" data-tab="pane-videos">
+                    <i class="fas fa-video"></i> Videos
+                </button>
+                <button id="back-home-btn" class="tab-btn" style="background: rgba(255,255,255,0.08);">
+                    <i class="fas fa-spa"></i> Inicio
+                </button>
+            </nav>
+        </header>
+
+        <!-- MAIN HUB CONTENT PANES -->
+        <div class="tab-content">
+            
+            <!-- TAB 1: CARTA DE AMOR -->
+            <div id="pane-letter" class="content-pane active">
+                <div class="letter-wrapper">
+                    
+                    <!-- Envelope -->
+                    <div id="envelope" class="envelope-container">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-seal">💜</div>
+                        <div class="envelope-pocket"></div>
+                    </div>
+                    <div class="envelope-hint">
+                        <i class="fas fa-hand-pointer"></i> Haz clic sobre el sobre para abrir tu carta
+                    </div>
+
+                    <!-- Openable Parchment Letter Card -->
+                    <div id="letter-card" class="letter-card">
+                        <div class="letter-header">
+                            <h2>Mi amor ❤️</h2>
+                            <i class="fas fa-heart" style="font-size: 2rem; color: #e879f9;"></i>
+                        </div>
+                        <div id="letter-body" class="letter-body">
+                            <p>Quiero desearte un feliz aniversario de <strong>2 años y 8 meses juntos</strong>. No sabes lo agradecido que estoy por tenerte en mi vida y por haber compartido contigo todo este tiempo. Gracias por cada momento que hemos vivido, por esforzarte cada día en ser una buena novia y una gran persona, y por seguir eligiéndome para caminar juntos.</p>
+
+                            <p>Sé que no todo ha sido fácil. Hemos pasado por momentos difíciles, hemos tenido nuestras diferencias y, aun así, hemos sabido salir adelante juntos. Eso me hace sentir que lo nuestro es algo muy especial, porque no solo estamos compartiendo nuestro presente, sino que también estamos construyendo nuestro futuro paso a paso. Y, mi amor, de verdad creo que podremos lograr todo lo que nos propongamos si seguimos apoyándonos y creciendo juntos.</p>
+
+                            <p>A veces me pongo a imaginar cómo será nuestra vida en unos años y no puedo evitar sonreír al pensar en todo lo que quiero vivir contigo. Me cuesta imaginar un futuro en el que no estés tú, en el que no estemos construyendo nuestro hogar y formando esa familia con la que tanto sueño. Incluso pienso en <strong>Samir y Mara</strong>, nuestros futuros hijos que todavía ni siquiera existen, pero a quienes desde ya imagino junto a nosotros. Sé que falta mucho por vivir y que tenemos muchas cosas por conseguir, pero quiero que seas tú la persona con la que comparta cada una de esas etapas. Quiero estar contigo en los días bonitos, pero también en aquellos en los que las cosas se pongan difíciles. Quiero verte cumplir tus sueños, cumplir los míos y, algún día, mirar atrás y sentirnos orgullosos de todo lo que construimos juntos.</p>
+
+                            <p>Gracias por ser esa novia tan espectacular, por darme tu amor, por preocuparte por mí y por hacerme sentir tan especial. Aunque también debo admitir que eres un poquito celosita, jajajaja, pero qué te puedo decir, mi amor, si hasta eso me gusta de ti. ❤️</p>
+
+                            <p>Estoy muy feliz de tenerte a mi lado y de poder celebrar un mes más de esta historia que estamos escribiendo juntos. No sé exactamente qué nos traerá el futuro, pero sí sé que quiero seguir descubriéndolo contigo, tomados de la mano y sin dejar de luchar por lo que soñamos.</p>
+
+                            <p><strong>Te amo muchísimo, mi amor.</strong> Gracias por estos dos años y ocho meses de amor, aprendizajes, momentos bonitos y recuerdos que siempre llevaré conmigo. Espero que sean muchísimos meses y años más, hasta que algún día podamos celebrar nuestro aniversario en nuestro propio hogar, con nuestros sueños cumplidos y con Samir y Mara corriendo por ahí, jajajaja.</p>
+
+                            <p>Feliz aniversario, mi vida. ❤️ Gracias por ser tú, por ser mi compañera y por formar parte de mis sueños más bonitos.</p>
+
+                            <p><strong>Te amo hoy, te amaré mañana y quiero seguir amándote durante toda nuestra vida.</strong></p>
+
+                            <p style="text-align: right; font-style: italic; font-weight: bold; font-family: var(--font-handwriting); font-size: 1.8rem; color: #7e22ce; margin-top: 1.5rem;">
+                                Siempre tuyo, tu hombre. ❤️
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB 2: GALERÍA DE FOTOS -->
+            <div id="pane-photos" class="content-pane">
+                <div class="gallery-header">
+                    <h2>Nuestra Galería de Recuerdos 📸</h2>
+                </div>
+
+                <div id="gallery-grid" class="gallery-grid">
+                    
+                    <div class="polaroid-card" style="--rotation: -2.5;">
+                        <div class="polaroid-img-box">
+                            <img src="img/foto1.jpg" alt="Nuestros momentos juntos">
+                        </div>
+                        <div class="polaroid-caption">Nuestros momentos juntos 💜</div>
+                    </div>
+
+                    <div class="polaroid-card" style="--rotation: 3.2;">
+                        <div class="polaroid-img-box">
+                            <img src="img/foto2.jpg" alt="Cada sonrisa a tu lado">
+                        </div>
+                        <div class="polaroid-caption">Cada sonrisa a tu lado ✨</div>
+                    </div>
+
+                    <div class="polaroid-card" style="--rotation: -4.1;">
+                        <div class="polaroid-img-box">
+                            <img src="img/foto3.jpg" alt="Construyendo nuestro futuro">
+                        </div>
+                        <div class="polaroid-caption">Construyendo nuestro futuro 💖</div>
+                    </div>
+
+                    <div class="polaroid-card" style="--rotation: 2.8;">
+                        <div class="polaroid-img-box">
+                            <img src="img/foto4.jpg" alt="Mi lugar favorito">
+                        </div>
+                        <div class="polaroid-caption">Mi lugar favorito es a tu lado 🌅</div>
+                    </div>
+
+                    <div class="polaroid-card" style="--rotation: -1.8;">
+                        <div class="polaroid-img-box">
+                            <img src="img/foto5.jpg" alt="2 años y 8 meses de amor">
+                        </div>
+                        <div class="polaroid-caption">2 Años y 8 Meses de Amor 🥰</div>
+                    </div>
+
+                    <div class="polaroid-card" style="--rotation: 3.5;">
+                        <div class="polaroid-img-box">
+                            <img src="img/foto6.jpg" alt="Gracias por hacerme tan feliz">
+                        </div>
+                        <div class="polaroid-caption">Gracias por hacerme tan feliz 🌷</div>
+                    </div>
+
+                    <div class="polaroid-card" style="--rotation: -3.0;">
+                        <div class="polaroid-img-box">
+                            <img src="img/foto7.jpg" alt="Por una vida entera juntos">
+                        </div>
+                        <div class="polaroid-caption">Por una vida entera a tu lado 💍</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB 3: VIDEOS -->
+            <div id="pane-videos" class="content-pane">
+                <div class="gallery-header">
+                    <h2>Nuestros Momentos en Video 🎥</h2>
+                </div>
+
+                <div id="video-list" class="video-container">
+                    
+                    <div class="video-card">
+                        <div class="video-player-box">
+                            <video controls preload="metadata">
+                                <source src="videos/videos1.mp4" type="video/mp4">
+                                Tu navegador no soporta este formato de video.
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>🎬 Nuestro Video Especial I</h3>
+                            <p>Recuerdo inolvidable juntos 💜</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-player-box">
+                            <video controls preload="metadata">
+                                <source src="videos/video2.mp4" type="video/mp4">
+                                Tu navegador no soporta este formato de video.
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>🎬 Nuestro Video Especial II</h3>
+                            <p>Risas y momentos mágicos ✨</p>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-player-box">
+                            <video controls preload="metadata">
+                                <source src="videos/video3.mp4" type="video/mp4">
+                                Tu navegador no soporta este formato de video.
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>🎬 Nuestro Video Especial III</h3>
+                            <p>Juntos por siempre 💖</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FLOATING AUDIO PLAYER WIDGET -->
+    <div class="audio-player-widget">
+        <button id="toggle-audio-btn" class="audio-btn">
+            <i id="audio-icon" class="fas fa-music"></i>
+        </button>
+        <div class="audio-info">
+            <span class="audio-title">Música de Fondo</span>
+            <span id="audio-status" class="audio-status">Toca para reproducir 🎵</span>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR PHOTOS -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close">&times;</button>
+            <img id="modal-img" src="" alt="Vista previa">
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
